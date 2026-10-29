@@ -54,13 +54,17 @@ def jumlahKelas(data):
             banyakKelas += int(hasilLog) + 1
         else:
             banyakKelas += int(hasilLog) 
-    print(f'\njumlah kelas = {banyakKelas}')
+    print(f'\njumlah kelas \t= {banyakKelas}')
     return banyakKelas
 
 def lebarKelas(data, n):
+    terbesar = max(data)
+    terkecil = min(data)
     classWidth = (max(data) - min(data)) / n
     lebKelas = round(classWidth, 2)
-    print(f'lebarKelas = {lebKelas}')
+    print(f'''Terbesar \t= {terbesar}
+Terkecil \t= {terkecil}
+lebarKelas \t= {lebKelas}''')
     return lebKelas
     
 

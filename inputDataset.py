@@ -29,7 +29,7 @@ dataset = sorted(RAWdataset)
 divider = '======================================================='
 print(f'''
 {divider}
-Nama Dataset: {namaDataset.upper()}
+Nama Dataset\t: {namaDataset.upper()}
 Dataset Input:
 {dataset}
 {divider}''')
