@@ -8,7 +8,7 @@ print(f'N = {banyakData}')
 
 def meanTunggal(data):
     mean = sum(data) / len(data)
-    print(f'Mean = {mean}')
+    print(f'Mean \t= {mean}')
     return mean
 
 def medianTunggal(data):
@@ -22,7 +22,7 @@ def medianTunggal(data):
         med = (banyakData // 2)
         operasi = data[med]
         median += operasi
-    print(f'Median = {median}')
+    print(f'Median \t= {median}')
     return median
 
 def modusTunggal(data):
@@ -33,7 +33,7 @@ def modusTunggal(data):
     nilaiMaks = max(freq.values())
 
     modus = [k for k, v in freq.items() if v == nilaiMaks]
-    print(f'Modus = {modus}')
+    print(f'Modus \t= {modus}')
     return modus
 
 print('\nDATA TUNGGAL:')
