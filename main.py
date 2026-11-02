@@ -11,19 +11,28 @@ def meanTunggal(data):
     print(f'Mean \t= {mean}')
     return mean
 
-def medianTunggal(data):
-    median = 0
+def quartil(data):
+    q1 = 0
+    q2 = 0
+    q3 = 0
     if banyakData % 2 == 0:
         med1 = (banyakData // 2) - 1
         med2 = (banyakData // 2)
-        operasi = (data[med1] + data[med2]) / 2
-        median += operasi
+        median = (data[med1] + data[med2]) / 2
+        q2 += median
     else:
         med = (banyakData // 2)
-        operasi = data[med]
-        median += operasi
-    print(f'Median \t= {median}')
-    return median
+        quart = ((med + 1) // 2) - 1
+        median = data[med]
+        quart1 = data[quart]
+        quart2 = data[med + quart + 1]
+        q1 += quart1
+        q2 += median
+        q3 += quart2
+    jarakQuartil = q3 - q1
+    print(f'''Q1 = {q1}\tQ2 = {q2}\t Q3 = {q3}
+IQR\t= {jarakQuartil}''')
+    return q2
 
 def modusTunggal(data):
     freq = {}
@@ -38,7 +47,7 @@ def modusTunggal(data):
 
 print('\nDATA TUNGGAL:')
 meanTunggal(lst)
-medianTunggal(lst)
+quartil(lst)
 modusTunggal(lst)
 print(divider)
 
