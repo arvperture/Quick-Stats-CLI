@@ -222,3 +222,6 @@ __marimo__/
 # .vscode
 .vscode
 .vscode/settings.json
+
+# .output
+output
